@@ -17,6 +17,12 @@ google-cloud-secret-manager = "^2.16"
 pydantic = "^1.10"
 pykeepass = "^4.0"
 
+[[tool.poetry.source]]
+name = "testpypi"
+url = "https://test.pypi.org/legacy/"
+default = false
+secondary = false
+
 [build-system]
 requires = ["poetry-core>=1.6.0"]
 build-backend = "poetry.core.masonry.api"
