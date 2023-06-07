@@ -1,0 +1,41 @@
+[tool.poetry]
+authors = [
+    "Andy Koch <andyvk85@gmail.com>",
+]
+classifiers = ["Programming Language :: Python :: 3"]
+description = "KeeGCPass is a command-line tool designed to simplify the management of secrets by seamlessly bridging the gap between local KeePass files and Google Cloud Platform's Secret Manager"
+license = "MIT"
+name = "keegcpass"
+packages = [{ include = "keegcpass", from = "src" }]
+readme = "README.md"
+repository = "https://github.com/andyvk85/KeeGCPass"
+version = "0.1.0"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core=^1.6.0"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+commitizen = "^3.7.0"
+pip-licenses = "^4.3.2"
+pytest = "^7.4.1"
+
+[[tool.poetry.source]]
+name = "testpypi"
+default = false
+secondary = false
+url = "https://test.pypi.org/legacy/"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version_files = [
+    "src/keegcpass/__init__.py:version",
+    "pyproject.toml:version",
+]
+version_provider = "poetry"
+version_scheme = "semver"
+tag_format = "$version"
+update_changelog_on_bump = true
