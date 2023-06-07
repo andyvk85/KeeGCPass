@@ -13,9 +13,10 @@ repository = "https://github.com/andyvk85/KeeGCPass"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-google-cloud-secret-manager = "^2.16"
-pydantic = "^1.10"
-pykeepass = "^4.0"
+google-cloud-secret-manager = "^2"
+pydantic = "^1"
+pykeepass = "^4"
+pip-licenses = "^4"
 
 [[tool.poetry.source]]
 name = "testpypi"
