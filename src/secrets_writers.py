@@ -5,7 +5,7 @@ from google.cloud import secretmanager_v1 as sm
 from google.cloud.secretmanager_v1 import SecretVersion
 from pykeepass import PyKeePass
 
-from validation_models import KeePassSecretsModel, GcpSecretsModel, SecretsModel
+from .validation_models import KeePassSecretsModel, GcpSecretsModel, SecretsModel
 
 
 class SecretsWriter(ABC):

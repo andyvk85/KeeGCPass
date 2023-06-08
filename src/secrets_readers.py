@@ -3,8 +3,7 @@ from abc import ABC, abstractmethod
 from google.cloud import secretmanager_v1 as sm
 from pykeepass import PyKeePass
 
-from validation_models import SecretsModel, GcpSecretsModel, SecretModel, KeePassSecretsModel
-
+from .validation_models import SecretsModel, GcpSecretsModel, SecretModel, KeePassSecretsModel
 
 class SecretsReader(ABC):
     @abstractmethod
