@@ -18,11 +18,11 @@ class SecretsModel(BaseModel):
         return v
 
 
-class KeePassSecretsWriterModel(BaseModel):
+class KeePassSecretsModel(BaseModel):
     file_path: FilePath
     master_password: constr(min_length=30, strict=True)
     group_name: constr(min_length=1, strict=True)
 
 
-class GcpSecretsWriterModel(BaseModel):
+class GcpSecretsModel(BaseModel):
     project_id: constr(min_length=1, strict=True)

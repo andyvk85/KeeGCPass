@@ -5,7 +5,7 @@ from google.cloud import secretmanager_v1 as sm
 from google.cloud.secretmanager_v1 import SecretVersion
 from pykeepass import PyKeePass
 
-from validation_models import KeePassSecretsWriterModel, GcpSecretsWriterModel, SecretsModel
+from validation_models import KeePassSecretsModel, GcpSecretsModel, SecretsModel
 
 
 class SecretsWriter(ABC):
@@ -15,7 +15,7 @@ class SecretsWriter(ABC):
 
 
 class GcpSecretsWriter(SecretsWriter):
-    def __init__(self, config: GcpSecretsWriterModel, client: sm.SecretManagerServiceClient = None):
+    def __init__(self, config: GcpSecretsModel, client: sm.SecretManagerServiceClient = None):
         super().__init__()
         self.project_id = config.project_id
         self.client = client or sm.SecretManagerServiceClient()
@@ -46,7 +46,7 @@ class GcpSecretsWriter(SecretsWriter):
 
 
 class KeePassSecretsWriter(SecretsWriter):
-    def __init__(self, config: KeePassSecretsWriterModel):
+    def __init__(self, config: KeePassSecretsModel):
         super().__init__()
         self.file_path = config.file_path
         self.master_password = config.master_password
