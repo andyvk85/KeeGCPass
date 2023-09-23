@@ -9,7 +9,7 @@ name = "keegcpass"
 packages = [{ include = "keegcpass", from = "src" }]
 readme = "README.md"
 repository = "https://github.com/andyvk85/KeeGCPass"
-version = "0.1.0"
+version = "0.2.0"
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
